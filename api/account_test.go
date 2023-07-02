@@ -304,7 +304,7 @@ func TestListAccountsAPI(t *testing.T) {
 			},
 			buildStubs: func(store *mockdb.MockStore) {
 				arg := db.ListAccountsParams{
-					// Owner:  user.Username,
+					Owner:  user.Username,
 					Limit:  int32(n),
 					Offset: 0,
 				}
