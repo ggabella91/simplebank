@@ -9,7 +9,7 @@ import (
 	reflect "reflect"
 
 	db "github.com/ggabella91/simplebank/db/sqlc"
-	gomock "go.uber.org/mock/gomock"
+	gomock "github.com/golang/mock/gomock"
 	uuid "github.com/google/uuid"
 )
 
