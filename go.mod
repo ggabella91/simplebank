@@ -7,10 +7,10 @@ require (
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-playground/validator/v10 v10.14.1
 	github.com/golang-migrate/migrate/v4 v4.16.2
-	github.com/golang/mock v1.4.4
 	github.com/google/uuid v1.3.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0
 	github.com/hibiken/asynq v0.24.1
+	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
 	github.com/lib/pq v1.10.9
 	github.com/o1egl/paseto v1.0.0
 	github.com/rakyll/statik v0.1.7
