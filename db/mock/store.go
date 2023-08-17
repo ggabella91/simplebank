@@ -9,8 +9,8 @@ import (
 	reflect "reflect"
 
 	db "github.com/ggabella91/simplebank/db/sqlc"
-	gomock "go.uber.org/mock/gomock"
 	uuid "github.com/google/uuid"
+	gomock "go.uber.org/mock/gomock"
 )
 
 // MockStore is a mock of Store interface.
@@ -139,6 +139,21 @@ func (m *MockStore) CreateUserTx(arg0 context.Context, arg1 db.CreateUserTxParam
 func (mr *MockStoreMockRecorder) CreateUserTx(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateUserTx", reflect.TypeOf((*MockStore)(nil).CreateUserTx), arg0, arg1)
+}
+
+// CreateVerifyEmail mocks base method.
+func (m *MockStore) CreateVerifyEmail(arg0 context.Context, arg1 db.CreateVerifyEmailParams) (db.VerifyEmail, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateVerifyEmail", arg0, arg1)
+	ret0, _ := ret[0].(db.VerifyEmail)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateVerifyEmail indicates an expected call of CreateVerifyEmail.
+func (mr *MockStoreMockRecorder) CreateVerifyEmail(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVerifyEmail", reflect.TypeOf((*MockStore)(nil).CreateVerifyEmail), arg0, arg1)
 }
 
 // DeleteAccount mocks base method.
