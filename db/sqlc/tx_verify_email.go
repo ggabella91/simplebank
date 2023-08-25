@@ -22,7 +22,10 @@ func (store *SQLStore) VerifyEmailTx(ctx context.Context, arg VerifyEmailTxParam
 		var err error
 
 		result.VerifyEmail, err = q.UpdateVerifyEmail(ctx, UpdateVerifyEmailParams{
-			ID:         arg.EmailId,
+			ID: sql.NullInt64{
+				Int64: arg.EmailId,
+				Valid: true,
+			},
 			SecretCode: arg.SecretCode,
 		})
 		if err != nil {
